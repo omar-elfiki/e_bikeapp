@@ -6,120 +6,607 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'E-Bike Connect',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const HomePage(title: 'Home'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
+class HomePage extends StatefulWidget {
+  const HomePage({super.key, required this.title});
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+        body: Container(
+      width: 393,
+      height: 852,
+      clipBehavior: Clip.antiAlias,
+      decoration: const BoxDecoration(color: Color(0xFFEBEBEB)),
+      child: Stack(
+        children: [
+          Positioned(
+            left: 24,
+            top: 456,
+            child: SizedBox(
+              width: 345,
+              height: 344,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 178.30,
+                    top: 177.79,
+                    child: SizedBox(
+                      width: 166.70,
+                      height: 166.21,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 166.70,
+                              height: 166.21,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFF282828),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Positioned(
+                            left: 12.70,
+                            top: 22,
+                            child: SizedBox(
+                              width: 130,
+                              height: 30,
+                              child: Text(
+                                'Settings',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 22,
+                                  fontFamily: 'Segoe UI',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.05,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 6.70,
+                            top: 115.21,
+                            child: Container(
+                              width: 43,
+                              height: 40,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/settings.png"),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    top: 177.79,
+                    child: SizedBox(
+                      width: 166.70,
+                      height: 166.21,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 166.70,
+                              height: 166.21,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFF282828),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 10,
+                            top: 115.21,
+                            child: Container(
+                              width: 43,
+                              height: 40,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                      "assets/images/charging-battery.png"),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Positioned(
+                            left: 13,
+                            top: 10,
+                            child: SizedBox(
+                              width: 130,
+                              height: 60,
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    left: 0,
+                                    top: 23,
+                                    child: SizedBox(
+                                      width: 107,
+                                      height: 45,
+                                      child: Text.rich(
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'Charging - 70%\n',
+                                              style: TextStyle(
+                                                color: Color(0xFF75F94C),
+                                                fontSize: 15,
+                                                fontFamily: 'Segoe UI',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: '120 KM Range',
+                                              style: TextStyle(
+                                                color: Color(0xFFB7B7B7),
+                                                fontSize: 12,
+                                                fontFamily: 'Segoe UI',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 0,
+                                    top: 0,
+                                    child: SizedBox(
+                                      width: 130,
+                                      height: 25,
+                                      child: Text(
+                                        'Battery',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 22,
+                                          fontFamily: 'Segoe UI',
+                                          fontWeight: FontWeight.w400,
+                                          height: 0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 178.30,
+                    top: 0,
+                    child: SizedBox(
+                      width: 166.70,
+                      height: 166.21,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 166.70,
+                              height: 166.21,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFF282828),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 3.70,
+                            top: 3,
+                            child: Container(
+                              width: 160,
+                              height: 160,
+                              decoration: ShapeDecoration(
+                                image: const DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/map.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 61.70,
+                            top: 23,
+                            child: Container(
+                              width: 36,
+                              height: 42,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/pin.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: SizedBox(
+                      width: 166.70,
+                      height: 166.21,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 166.70,
+                              height: 166.21,
+                              decoration: ShapeDecoration(
+                                color: const Color(0xFF282828),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 10,
+                            top: 105,
+                            child: Container(
+                              width: 42,
+                              height: 50,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/padlock.png"),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const Positioned(
+                            left: 13,
+                            top: 10,
+                            child: SizedBox(
+                              width: 130,
+                              height: 60,
+                              child: Stack(
+                                children: [
+                                  Positioned(
+                                    left: 0,
+                                    top: 23,
+                                    child: SizedBox(
+                                      width: 130,
+                                      height: 35,
+                                      child: Text.rich(
+                                        TextSpan(
+                                          children: [
+                                            TextSpan(
+                                              text: 'Unlocked\n',
+                                              style: TextStyle(
+                                                color: Color(0xFFBB0000),
+                                                fontSize: 15,
+                                                fontFamily: 'Segoe UI',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: 'Anti-theft deactivated',
+                                              style: TextStyle(
+                                                color: Color(0xFFB7B7B7),
+                                                fontSize: 12,
+                                                fontFamily: 'Segoe UI',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 0,
+                                    top: 0,
+                                    child: SizedBox(
+                                      width: 130,
+                                      height: 25,
+                                      child: Text(
+                                        'Lock Status',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 22,
+                                          fontFamily: 'Segoe UI',
+                                          fontWeight: FontWeight.w400,
+                                          height: 0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          Positioned(
+            left: 34,
+            top: 125,
+            child: Container(
+              width: 326,
+              height: 211,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/bike-mockup.png"), //bike image
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
-          ],
-        ),
+          ),
+          Positioned(
+            left: 20,
+            top: 53,
+            child: SizedBox(
+              width: 353,
+              height: 51,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 0,
+                    top: 0,
+                    child: Container(
+                      width: 353,
+                      height: 51,
+                      decoration: ShapeDecoration(
+                        color: const Color(0xFF282828),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const Positioned(
+                    left: 52,
+                    top: 10,
+                    child: SizedBox(
+                      width: 160,
+                      height: 22,
+                      child: Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Omar’s Pedelec ',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontFamily: 'Segoe UI',
+                                fontWeight: FontWeight.w400,
+                                height: 0,
+                              ),
+                            ),
+                            TextSpan(
+                              text: '>',
+                              style: TextStyle(
+                                color: Color(0xFFA29C9C),
+                                fontSize: 20,
+                                fontFamily: 'Segoe UI',
+                                fontWeight: FontWeight.w300,
+                                height: 0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 276,
+                    top: 10,
+                    child: SizedBox(
+                      width: 68,
+                      height: 22,
+                      child: Stack(
+                        children: [
+                          const Positioned(
+                            left: 0,
+                            top: 3,
+                            child: SizedBox(
+                              width: 29,
+                              height: 14,
+                              child: Text(
+                                ' 70%',
+                                style: TextStyle(
+                                  color: Color(0xFF75F94C),
+                                  fontSize: 12,
+                                  fontFamily: 'Segoe UI',
+                                  fontWeight: FontWeight.w600,
+                                  height: 0,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 31,
+                            top: 0,
+                            child: Container(
+                              width: 37,
+                              height: 22,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/full-battery.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 6,
+                    top: 6,
+                    child: SizedBox(
+                      width: 39,
+                      height: 39,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            child: Container(
+                              width: 39,
+                              height: 39,
+                              decoration: const ShapeDecoration(
+                                color: Colors.white,
+                                shape: OvalBorder(),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 3,
+                            top: 0,
+                            child: Container(
+                              width: 32.88,
+                              height: 39,
+                              decoration: ShapeDecoration(
+                                image: const DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/profile-picture.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(21.50),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 34,
+            top: 424,
+            child: SizedBox(
+              width: 84,
+              height: 20,
+              child: Text(
+                'Widgets',
+                style: TextStyle(
+                  color: Color(0xFF282828),
+                  fontSize: 22,
+                  fontFamily: 'Segoe UI',
+                  fontWeight: FontWeight.w400,
+                  height: 0.05,
+                ),
+              ),
+            ),
+          ),
+          const Positioned(
+            left: 133,
+            top: 358,
+            child: SizedBox(
+              width: 128,
+              height: 28,
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 27,
+                    top: 0,
+                    child: SizedBox(
+                      width: 74,
+                      height: 12,
+                      child: Text(
+                        'S.N: 01234ABC1A',
+                        style: TextStyle(
+                          color: Color(0xFF888888),
+                          fontSize: 10,
+                          fontFamily: 'Segoe UI',
+                          fontWeight: FontWeight.w300,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    top: 16,
+                    child: SizedBox(
+                      width: 128,
+                      height: 12,
+                      child: Text(
+                        'Date of Manufacture: 06/2025',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xFF888888),
+                          fontSize: 10,
+                          fontFamily: 'Segoe UI',
+                          fontWeight: FontWeight.w300,
+                          height: 0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    ));
   }
 }
