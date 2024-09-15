@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "618108623420",
+    "project_id": "e-bike-connect-os",
+    "storage_bucket": "e-bike-connect-os.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618108623420:android:30c7f9cccb9e142c3a4139",
+        "android_client_info": {
+          "package_name": "com.example.e_bikeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeOnR4tMU4vbq2oN1AQPjqJiCmzT3OSuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
