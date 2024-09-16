@@ -1,3 +1,4 @@
+import 'package:e_bikeapp/profile.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(title: 'Home'),
+      home: const ProfilePage(),
     );
   }
 }

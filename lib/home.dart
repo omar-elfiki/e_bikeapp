@@ -360,7 +360,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Positioned(
             left: 34,
-            top: 125,
+            top: 133,
             child: Container(
               width: 326,
               height: 211,
@@ -373,30 +373,27 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Positioned(
-            left: 20,
-            top: 53,
+            left: 0,
+            top: 0,
             child: SizedBox(
-              width: 353,
-              height: 51,
+              width: 393,
+              height: 113,
               child: Stack(
                 children: [
                   Positioned(
                     left: 0,
                     top: 0,
                     child: Container(
-                      width: 353,
-                      height: 51,
-                      decoration: ShapeDecoration(
-                        color: const Color(0xFF282828),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25),
-                        ),
+                      width: 393,
+                      height: 113,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF282828),
                       ),
                     ),
                   ),
                   const Positioned(
-                    left: 52,
-                    top: 10,
+                    left: 72,
+                    top: 76,
                     child: SizedBox(
                       width: 160,
                       height: 22,
@@ -413,24 +410,14 @@ class _HomePageState extends State<HomePage> {
                                 height: 0,
                               ),
                             ),
-                            TextSpan(
-                              text: '>',
-                              style: TextStyle(
-                                color: Color(0xFFA29C9C),
-                                fontSize: 20,
-                                fontFamily: 'Segoe UI',
-                                fontWeight: FontWeight.w300,
-                                height: 0,
-                              ),
-                            ),
                           ],
                         ),
                       ),
                     ),
                   ),
                   Positioned(
-                    left: 276,
-                    top: 10,
+                    left: 296,
+                    top: 76,
                     child: SizedBox(
                       width: 68,
                       height: 22,
@@ -474,8 +461,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Positioned(
-                    left: 6,
-                    top: 6,
+                    left: 26,
+                    top: 68,
                     child: SizedBox(
                       width: 39,
                       height: 39,
