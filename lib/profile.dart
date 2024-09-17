@@ -590,10 +590,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                             const Positioned(
                                 left: 14,
-                                top: 96.08,
+                                top: 95,
                                 child: SizedBox(
                                     width: 243,
-                                    height: 30,
+                                    height: 40,
                                     child: Text(
                                         'Profile',
                                         style: TextStyle(
