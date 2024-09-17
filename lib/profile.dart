@@ -64,7 +64,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     height: 30,
                                     decoration: const BoxDecoration(
                                         image: DecorationImage(
-                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                            image: AssetImage('assets/icons/logout.png'),
                                             fit: BoxFit.contain,
                                         ),
                                     ),
@@ -131,7 +131,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     height: 30,
                                                     decoration: const BoxDecoration(
                                                         image: DecorationImage(
-                                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                                            image: AssetImage('assets/icons/lock.png'),
                                                             fit: BoxFit.contain,
                                                         ),
                                                     ),
@@ -190,7 +190,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     height: 30,
                                                     decoration: const BoxDecoration(
                                                         image: DecorationImage(
-                                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                                            image: AssetImage('assets/icons/user.png'),
                                                             fit: BoxFit.contain,
                                                         ),
                                                     ),
@@ -250,7 +250,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     height: 30,
                                     decoration: const BoxDecoration(
                                         image: DecorationImage(
-                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                            image: AssetImage('assets/icons/help.png'),
                                             fit: BoxFit.contain,
                                         ),
                                     ),
@@ -306,7 +306,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     height: 30,
                                     decoration: const BoxDecoration(
                                         image: DecorationImage(
-                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                            image: AssetImage('assets/icons/alarm.png'),
                                             fit: BoxFit.contain,
                                         ),
                                     ),
@@ -351,8 +351,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 left: 59,
                                                 top: 17,
                                                 child: SizedBox(
-                                                    width: 140,
-                                                    height: 20.79,
+                                                    width: 150,
+                                                    height: 25,
                                                     child: Text(
                                                         'Change Password',
                                                         style: TextStyle(
@@ -373,7 +373,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     height: 30,
                                                     decoration: const BoxDecoration(
                                                         image: DecorationImage(
-                                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                                            image: AssetImage('assets/icons/lock.png'),
                                                             fit: BoxFit.contain,
                                                         ),
                                                     ),
@@ -432,7 +432,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     height: 30,
                                                     decoration: const BoxDecoration(
                                                         image: DecorationImage(
-                                                            image: NetworkImage("https://via.placeholder.com/30x30"),
+                                                            image: AssetImage('assets/icons/user.png'),
                                                             fit: BoxFit.contain,
                                                         ),
                                                     ),
@@ -508,7 +508,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                     height: 63,
                                                     decoration: ShapeDecoration(
                                                         image: const DecorationImage(
-                                                            image: NetworkImage("https://via.placeholder.com/59x63"),
+                                                            image: AssetImage('assets/images/profile-picture.png'),
                                                             fit: BoxFit.cover,
                                                         ),
                                                         shape: RoundedRectangleBorder(
@@ -526,7 +526,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 top: 2,
                                 child: SizedBox(
                                     width: 112,
-                                    height: 23,
+                                    height: 25,
                                     child: Text(
                                         'Omar Elfiki',
                                         style: TextStyle(
@@ -541,10 +541,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                             const Positioned(
                                 left: 82,
-                                top: 35,
+                                top: 32,
                                 child: SizedBox(
                                     width: 166,
-                                    height: 25,
+                                    height: 40,
                                     child: Text(
                                         'Maastricht, Netherlands\nomarelfiki@gmail.com',
                                         style: TextStyle(
@@ -593,7 +593,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 top: 96.08,
                                 child: SizedBox(
                                     width: 243,
-                                    height: 29.22,
+                                    height: 30,
                                     child: Text(
                                         'Profile',
                                         style: TextStyle(
